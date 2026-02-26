@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>履歴書 | Interactive Resume (2pages)</title>
+    <style>
+        /* --- 基本の「紙」の設定 --- */
+        body {
+            background-color: #e0e0e0; /* 机の上をイメージ */
+            display: flex;
+            flex-direction: column; /* 縦に並べる */
+            align-items: center;
+            padding: 50px 0;
+            margin: 0;
+            font-family: "Sawarabi Mincho", "Hiragino Mincho ProN", serif;
+        }
+
+        /* 履歴書本体（紙） */
+        .resume-paper {
+            background-color: #fff;
+            width: 700px;
+            min-height: 900px; /* A4っぽさを出すための高さ */
+            padding: 60px;
+            box-shadow:
+              0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 50px; /* 1枚目と2枚目の間の隙間 */
+            position: relative;
+            
+            /* --- ふんわり出てくるアニメーション --- */
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 共通の枠組み設定 */
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #555;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        h1, h2 {
+            margin: 0;
+            letter-spacing: 0.2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f9f9f9;
+            width: 100px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 150px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 0.7rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            border-bottom: 1px solid #555;
+            margin: 20px 0 10px 0;
+            padding-bottom: 5px;
+        }
+
+        .content-text {
+            font-size: 0.95rem;
+            line-height: 2;
+            white-space: pre-wrap; /* 改行を反映させる */
+        }
+.section-title {
+  font-family: "Hiragino Mincho ProN", "Shippori Mincho", serif; /* 明朝体にこだわる */
+  font-weight: bold; /* ほどよい太字 */
+  letter-spacing: 0.2em; /* 文字の間隔を広めにあける（これが品格の秘訣！） */
+  border-bottom: 1px solid #ccc; /* 線を細く、薄くする */
+  background: none; /* 背景色を消して、スッキリさせる */
+  padding-left: 0;
+}
+.org-name {
+  font-weight: bold;
+  font-family: serif;
+  display: block;
+  margin-bottom: 5px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="resume-paper">
+        <div class="header-section">
+            <div>
+                <p style="font-size: 0.7rem; margin: 0;">2026年 2月 25日 現在</p>
+                <h1 style="font-size: 20px;">履 歴 書</h1>
+            </div>
+            <div class="profile-img">写真を貼る位置</div>
+        </div>
+
+      <h2 class="section-title">基本情報</h2>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px;">
+  <table style="flex: 1; margin-top: 0; border-collapse: collapse;">
+    <tr>
+      <th style="width: 120px;">氏名</th>
+      <td><div style="font-size: 20px; font-weight: bold;">百 瀬 響 子</div></td>
+    </tr>
+    <tr>
+      <th>生年月日</th>
+      <td>1978年 7月 17日</td>
+    </tr>
+    <tr>
+      <th>現住所</th>
+      <td>千葉県佐倉市山王（京都市への移住を希望）</td>
+    </tr>
+    <tr>
+      <th>連絡先</th>
+      <td>
+        <div style="font-weight: bold;">wkyoko0717@gmail.com</div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
+       <h2 class="section-title">学歴・職歴</h2>
+<table>
+  <tr>
+    <th style="width: 80px;">2001年</th>
+    <td>
+      <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px; font-weight: bold;">慶應義塾大学環境情報学部卒業</div>
+      <small style="color: #666;">佐藤雅彦研究会に所属。表現とメディアを専攻。絵本『コんガらガっち』の制作に携わる。</small>
+    </td>
+  </tr>
+  
+  <tr>
+    <th>2001年〜</th>
+    <td>
+      <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px; font-weight: bold;">任天堂株式会社入社</div>
+      <small style="color: #666;">ポケットモンスタールビー&サファイア、メイドインワリオシリーズ、トモダチコレクション、カードヒーロー、ファイアーエムブレム等の監修、テキスト制作に携わる。</small>
+    </td>
+  </tr>
+  
+  <tr>
+    <th>2011年〜</th>
+    <td>
+      <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px; font-weight: bold;">フリーライターとして活動</div>
+      <small style="color: #666;">心理テスト、タロット占い、スピリチュアル、スマホアプリ謎解きゲーム、等のテキスト制作を多数担当。ランサーズで認定ランサーとなり、1,000万円以上を売り上げる。</small>
+    </td>
+  </tr>
+  
+  <tr>
+    <th>2022年〜</th>
+    <td>
+      <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px; font-weight: bold;">株式会社OGA入社</div>
+      <small style="color: #666;">登録者数100万人を超える動画サイトにて、おもちゃを紹介する動画制作を担当。また、生成AIを使ったドリームコアのチャンネルを運営。</small>
+    </td>
+  </tr>
+  
+  <tr>
+    <th>2023年〜</th>
+    <td>
+      <div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 5px; font-weight: bold;">株式会社Whateverと業務提携</div>
+      <small style="color: #666;">京都にて人気シェアオフィスを運営する企業、『Whatever』と業務提携し、コピーライティング、ブログ制作、WEBデザイン、リーフレットデザイン等の業務を担当。</small>
+    </td>
+  </tr>
+</table>
+
+
+
+        <h2 class="section-title">スキル・資格</h2>
+<table>
+  <tr>
+    <th style="width: 120px;">画像系</th>
+    <td>
+      <div style="font-weight: bold; margin-bottom: 5px;">Photoshop / Illustrator / Canva　他</div>
+      <small style="color: #666;">WEB素材やリーフレットの制作、写真の補正・加工まで幅広く対応可能です。</small>
+    </td>
+  </tr>
+  <tr>
+    <th>映像系</th>
+    <td>
+      <div style="font-weight: bold; margin-bottom: 5px;">Filmora / 生成AI活用　他</div>
+      <small style="color: #666;">YouTube動画制作やドリームコア制作など、視覚的に惹きつける映像構築が可能です。</small>
+    </td>
+  </tr>
+  <tr>
+    <th>WEB系</th>
+    <td>
+      <div style="font-weight: bold; margin-bottom: 5px;">HTML5 / CSS3 / JavaScript / Studio / WordPress　他</div>
+      <small style="color: #666;">Studioでの制作や、コードを理解した上での柔軟なカスタマイズを研究しています。</small>
+    </td>
+  </tr>
+</table>
+
+    </div>
+
+    <div class="resume-paper">
+        <h2 class="section-title" style="margin-top: 0;">自己PR</h2>
+        <div class="content-text">
+執筆中。
+        </div>
+
+        <h2 class="section-title">執筆実績・ポートフォリオ</h2>
+        <div class="content-text">
+執筆中。
+        </div>
+
+        <h2 class="section-title">志望動機・特記事項</h2>
+        <div class="content-text">
+執筆中。
+        </div>
+    </div>
+
+</body>
+</html>
+
+
