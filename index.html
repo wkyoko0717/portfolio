@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYOKO MOMOSE | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="#top" style="text-decoration: none; color: inherit;">
+            KYOKO<br>MOMOSE
+        </a>
+    </div>
+    <ul class="menu-list">
+
+  <li><a href="#resume">RESUME</a></li>
+
+
+<li>
+    <a href="javascript:void(0)" id="works-parent" style="cursor: default;">WORKS</a>
+        <ul class="sub-menu" id="works-sub">
+            <li><a href="#works-direction">Game Direction</a></li>
+            <li><a href="#works-web">Web Design</a></li>
+            <li><a href="#works-video">Video</a></li>
+            <li><a href="#works-writing">Writing</a></li>
+        </ul>
+    </li>
+  
+    <li><a href="#contact">CONTACT</a></li>
+</ul>
+    <div class="footer-info">
+        &copy; 2026 Kyoko Momose<br>
+        Creative Director / Writer<br>
+    </div>
+</nav>
+
+<main>
+    <section id="top" class="top-section">
+        <video src="images/sunawa.mov" autoplay muted loop playsinline></video>
+        <div class="top-text"></div>
+    </section>
+
+    <section id="resume" class="content-section" style="display: none;"></section>
+    
+    <section id="works-direction" class="content-section" style="display: none;"></section>
+    
+    <section id="works-web" class="content-section" style="display: none;"></section>
+    <section id="works-video" class="content-section" style="display: none;"></section>
+    <section id="works-writing" class="content-section" style="display: none;"></section>
+
+    <section id="contact" class="content-section" style="display: none;"></section>
+</main>
+
+<template id="resume-template">
+   
+        <div class="resume-section">
+            <div class="resume-header">
+                <div>
+                    <p style="font-size: 0.7rem; color: #999; margin-bottom: 10px;">2026年 3月 現在</p>
+                    <h1>履 歴 書</h1>
+                </div>
+                <div class="profile-img-container">
+                    <img src="images/kyoko.jpg" alt="百瀬 響子">
+                </div>
+            </div>
+
+            <div class="section-title">基本情報</div>
+            <table>
+                <tr><th>氏名</th><td><div style="font-size: 1.5rem; font-weight: bold; letter-spacing: 0.2em;">百 瀬 響 子</div></td></tr>
+                <tr><th>生年月日</th><td>1978年 7月 17日</td></tr>
+                <!--<tr><th>現住所</th><td>千葉県佐倉市山王（京都市へ移住予定）</td></tr>
+                <tr><th>連絡先</th><td>wkyoko0717@gmail.com</td></tr>-->
+            </table>
+
+            <div class="section-title">学歴・職歴</div>
+            <table>
+                <tr>
+                    <th>2001年</th>
+                    <td>
+                        <div style="font-weight: bold;">慶應義塾大学環境情報学部卒業</div>
+                        <div class="work-desc">佐藤雅彦研究会に所属。表現とメディアを専攻。絵本『コんガらガっち』の制作に携わる。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2001年〜</th>
+                    <td>
+                        <div style="font-weight: bold;">任天堂株式会社入社</div>
+                        <div class="work-desc">ポケットモンスタールビー&サファイア、メイドインワリオシリーズ、トモダチコレクション、カードヒーロー、ファイアーエムブレム等の監修、テキスト制作に携わる。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2011年〜</th>
+                    <td>
+                        <div style="font-weight: bold;">フリーライターとして活動</div>
+                        <div class="work-desc">心理テスト、タロット占い、スピリチュアル、スマホアプリ謎解きゲーム、等のテキスト制作を多数担当。ランサーズで認定ランサーとなり、1,000万円以上を売り上げる。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2022年〜</th>
+                    <td>
+                        <div style="font-weight: bold;">株式会社OGA入社</div>
+                        <div class="work-desc">登録者数100万人を超える動画サイトにて、おもちゃを紹介する動画制作を担当。また、生成AIを使ったドリームコアのチャンネルを運営。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2023年〜</th>
+                    <td>
+                        <div style="font-weight: bold;">株式会社Whateverと業務提携</div>
+                        <div class="work-desc">京都にて人気シェアオフィスを運営する企業、『Whatever』と業務提携し、コピーライティング、ブログ制作、WEBデザイン、リーフレットデザイン等の業務を担当。</div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="section-title">スキル・資格</div>
+            <table>
+                <tr>
+                    <th>画像系</th>
+                    <td>
+                        <strong>Photoshop / Illustrator / Canva　他</strong><br>
+                        <small style="color: #666;">WEB素材やリーフレットの制作、写真の補正・加工まで幅広く対応可能です。</small>
+                    </td>
+                </tr>
+                <tr>
+                    <th>映像系</th>
+                    <td>
+                        <strong>Filmora / 生成AI活用　他</strong><br>
+                        <small style="color: #666;">AIでのドリームコア制作など、視覚的に惹きつける映像構築を心がけております。</small>
+                    </td>
+                </tr>
+                <tr>
+                    <th>WEB系</th>
+                    <td>
+                        <strong>HTML5 / CSS3 / JavaScript / Studio / WordPress　他</strong><br>
+                        <small style="color: #666;">Studioでの制作や、コードを理解した上での柔軟なカスタマイズを研究しています。</small>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="section-title">自己PR</div>
+            <div style="margin: 40px 0;">
+                <p style="font-weight: bold; font-size: 1.1rem; line-height: 1.8;">
+                    クリエイティブを通じて、社会に貢献するため<br>
+                    私が大切にしている「4つの強み」をお伝えします。
+                </p>
+            </div>
+
+            <div class="pr-card">
+                <span class="pr-title fade-in-title">1. 文脈を読み解き、真実を捉える「洞察力」</span>
+                <p>任天堂でのコーディネーター業務やタロット占いのセッションを通じ、相手が言葉にできない真のニーズを汲み取り、納得感のある最適解を提示することを大切にして参りました。</p>
+            </div>
+
+            <div class="pr-card">
+                <span class="pr-title fade-in-title">2. クリエイティブへの深い理解と、圧倒的な「表現力」</span>
+                <p>言葉、デザイン、映像のクオリティに妥協せず、一文字、一画にまで魂を込めて仕上げます。受け手の心が動く瞬間を想像しながら、多角的な表現を追求し続けています。</p>
+            </div>
+
+            <div class="pr-card">
+                <span class="pr-title fade-in-title">3. 最新技術を身に付け、即座に武器にする「適応力」</span>
+                <p>100万人規模チャンネルでの制作や生成AIの活用など、常に変化の最前線に身を置いてきました。新しい技術を恐れず自ら学び、現場の表現力を柔軟に高め続ける適応力を自負しています。</p>
+            </div>
+
+            <div class="pr-card">
+                <span class="pr-title fade-in-title">4. 高い市場感覚と、プロとしての「完遂力」</span>
+                <p>認定ランサーとして積み上げた600件超の実績は、一つひとつの期待に誠実に応え続けてきた証です。ビジネスの目標達成に向け、どのような難題でも最後まで責任を持って完遂いたします。 </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 100px;">
+                <a href="index.html" class="btn-works">BACK TO HOME</a>
+            </div>
+        </div>
+    </template>
+
+<template id="works-direction-template">
+    <div class="resume-section">
+        <h2 class="section-title">Game Direction</h2>
+        <div class="works-grid">
+            
+            <a href="https://www.nintendo.co.jp/pokemon/index.html" target="_blank" class="work-item">
+                <div class="work-img-wrapper">
+                    <img src="images/pokemon.png" alt="ポケットモンスター　ルビー＆サファイア">
+                </div>
+                <div class="work-title">『ポケットモンスター　ルビー＆サファイア』</div>
+                <div class="work-category">Coordination</div>
+                <div class="work-description">
+                    大人気ソフトの制作における進行管理、およびディレクションを担当。
+	ランニングシューズの仕様を新たに追加する等の企画提案を行いました。
+                </div>
+            </a>
+
+            <a href="https://www.nintendo.com/jp/switch/blfga/index.html" target="_blank" class="work-item">
+                <div class="work-img-wrapper">
+                    <img src="images/tomocolle.png" alt="トモダチコレクション">
+                </div>
+                <div class="work-title">『トモダチコレクション』</div>
+                <div class="work-category">Planning / Writing</div>
+                <div class="work-description">
+                    オリジナルアバター『Mii』を使ったユニークなコミュニケーション体験を企画。
+                    『適職の館』コーナーの監修とテキストを担当しました。
+                </div>
+            </a>
+
+            <a href="https://www.nintendo.co.jp/ds/uorj/index.html" target="_blank" class="work-item">
+                <div class="work-img-wrapper">
+                    <img src="images/ore.jpg" alt="メイドイン俺">
+                </div>
+                <div class="work-title">『メイドイン俺』</div>
+                <div class="work-category">Direction / Planning</div>
+                <div class="work-description">
+                    「つくる」楽しさを提供するゲームシステムのディレクションを担当。
+                    自由度の高いクリエイティブ体験を形にするため、チュートリアルの設計に力を入れました。
+                </div>
+            </a>
+
+            <a href="https://www.nintendo.co.jp/ds/ychj/index.html" target="_blank" class="work-item">
+                <div class="work-img-wrapper">
+                    <img src="images/cardhero.png" alt="高速カードバトル　カードヒーロー">
+                </div>
+                <div class="work-title">『高速カードバトル　カードヒーロー』</div>
+                <div class="work-category">Writing</div>
+                <div class="work-description">
+                    奥深い戦略性が魅力の大人気カードゲームのシナリオを担当。
+	ゲームを進めながらルールを理解することができるよう、脚本のテキストを書き進めました。
+                </div>
+            </a>
+
+        </div>
+<div class="and-more">
+    and more... 
+    <span>『ポケモンピンボール』/『ファイアーエムブレム』/『あつまれ！！メイドインワリオ』... etc.</span>
+</div>
+    </div>
+</template>
+
+<template id="works-web-template">
+    <div class="resume-section">
+        <h2 class="section-title">Web Design</h2>
+        <div class="works-grid is-web">
+            
+            <a href="https://whatever-ochanomizu.studio.site/" target="_blank" class="work-item">
+    <div class="work-img-wrapper">
+        <img src="images/ocha.jpg" alt="Whateverお茶の水">
+    </div>
+    <div class="work-title">Whateverお茶の水</div>
+    <div class="work-category">Web Design / Writing</div>
+    <div class="work-description">
+        京都の大人気シェアオフィス『Whatever』の東京初進出となる、お茶の水店のWEBページをデザインしました。イメージの提案、キャッチコピーやボディテキストも全て担当させて頂きました。
+    </div>
+</a>
+
+<a href="https://aruniwatarot.studio.site/" target="_blank" class="work-item">
+    <div class="work-img-wrapper">
+        <img src="images/aruniwa.jpg" alt="或庭 - aruniwa -">
+    </div>
+    <div class="work-title">或庭 - aruniwa -</div>
+    <div class="work-category">Branding / Web Design / Writing</div>
+    <div class="work-description">
+        京都下鴨にて立ち上げた、自身のタロットカウンセリングルームの公式サイトです。
+        ロゴデザイン、コンセプト設計、サイト構成、ライティングまで全てをセルフプロデュースしました。
+    </div>
+</a>
+
+<a href="https://nature-escape.studio.site/" target="_blank" class="work-item">
+    <div class="work-img-wrapper">
+        <img src="images/nature.jpg" alt="nature escape">
+    </div>
+    <div class="work-title">nature escape</div>
+    <div class="work-category">Web Design / Writing</div>
+    <div class="work-description no-note">
+        京都のシェアオフィスにて開催された、企画自然写真展のHPを担当しました。実際に写真がギャラリーに展示されているかのようなインタラクティブなデザインを心がけ、ご好評を頂きました。
+    </div>
+</a>
+
+<a href="https://andlobby.com" target="_blank" class="work-item">
+    <div class="work-img-wrapper">
+<img src="images/and.jpg" alt="and lobby" style="transform: scale(1.1); object-position: center;">
+    </div>
+    <div class="work-title">and lobby</div>
+    <div class="work-category">Branding / Web Design / Writing</div>
+    <div class="work-description no-note">
+        時代のニーズに合わせた、新しいAI教室のHPです。
+コンセプト構築、サイトデザイン、動画生成、画像生成等、キャッチコピー等、完全プロデュースしております。
+    </div>
+</a>
+
+<a href="https://qumarivision.studio.site/" target="_blank" class="work-item">
+    <div class="work-img-wrapper">
+        <img src="images/qumari.jpg" alt="QUMARI">
+    </div>
+    <div class="work-title">QUMARI</div>
+    <div class="work-category">Branding / Web Design / Writing</div>
+    <div class="work-description no-note">
+        起業したい女性、夢だった働き方を実現させたい女性をプロデュースするサロンです。現代的でスタイリッシュな画像を配置し、視覚的な訴求力を追求しました。
+    </div>
+</a>
+
+<a href="https://u-nerior-01.studio.site/" target="_blank" class="work-item">
+    <div class="work-img-wrapper">
+        <img src="images/unerior.jpg" alt="unerior">
+    </div>
+    <div class="work-title">U-nerior</div>
+    <div class="work-category">Concept Planning / Web Design / Writing</div>
+    <div class="work-description">
+        潜在的なアーティスト達の活動を促進する企画を開催。企画のプロデュース、運営、WEBデザインをトータルで行い、過去最高のお問い合わせ数を頂きました。
+    </div>
+</a>
+
+</div> <div class="and-more">
+                and more... 
+                <!--<span>（LP制作 / バナー制作 / ロゴデザイン / WordPressカスタマイズ... etc.）</span>-->
+            </div>
+            </div>
+    </div>
+</template>
+
+<template id="works-video-template">
+    <div class="resume-section">
+        <h2 class="section-title">Video</h2>
+        
+        <div class="video-set-container">
+            
+            <div class="video-set">
+                <div class="video-pair">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube-nocookie.com/embed/lfcQkQoj5zM?si=9j6gAwqpvqIG6sDm"></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/A7j-BmIFjgI" ></iframe>
+                    </div>
+                </div>
+                <div class="work-title">プロジェクト名やシリーズ名</div>
+                <div class="work-category">Direction / Editing</div>
+                <div class="work-description">
+                    ここに2つの動画に共通する説明文を書くんや。
+                    左は本編、右はダイジェスト、みたいな書き方もできるな。
+<br><br><a href="URL" target="_blank" style="color: #008080; font-size: 0.75rem;">→ チャンネルのトップページはこちら</a>
+                </div>
+            </div>
+
+            </div>
+
+ <div class="video-set-container">
+            
+            <div class="video-set">
+                <div class="video-pair">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/N6YD7xFGan0" ></iframe>
+                    </div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VBZQ0cgLuIA" ></iframe>
+                    </div>
+                </div>
+                <div class="work-title">プロジェクト名やシリーズ名</div>
+                <div class="work-category">Direction / Editing</div>
+                <div class="work-description">
+                    ここに2つの動画に共通する説明文を書くんや。
+                    左は本編、右はダイジェスト、みたいな書き方もできるな。
+<br><br><a href="URL" target="_blank" style="color: #008080; font-size: 0.75rem;">→ チャンネルのトップページはこちら</a>
+                </div>
+            </div>
+</div>
+
+            </div>
+    </div>
+</template>
+
+<template id="contact-template">
+    <div class="resume-section">
+        <h2 class="section-title">CONTACT</h2>
+        <div style="text-align: center; padding: 40px 0;">
+            <p style="letter-spacing: 0.1em; line-height: 2;">
+                以下のメールアドレスまでお気軽にご連絡ください。
+            </p>
+            
+            <div style="margin: 30px 0; padding: 20px; border: 1px solid #eee; display: inline-block;">
+                <p style="font-size: 0.8rem; color: #999;">Email</p>
+                <p style="font-size: 1.0rem; letter-spacing: 0.1em;">wkyoko0717@gmail.com</p>
+            </div>
+
+            <p style="font-size: 0.8rem; color: #999; margin-top: 20px;">Address</p>
+            <p>〒285-0807　千葉県佐倉市山王（京都市への移住を予定しております。）</p>
+        </div>
+    </div>
+</template>
+
+<script>
+// セクション切り替えの関数
+function showSection(sectionId) {
+    // 全てのセクション（TOPも含む）を一旦隠す
+    document.querySelectorAll('.content-section, .top-section').forEach(sec => {
+        sec.style.display = 'none';
+    });
+    
+    // 指定されたIDのセクションだけを表示する
+    const target = document.getElementById(sectionId);
+    if (target) {
+        // TOPセクションだけは flex、それ以外は block で表示
+        target.style.display = (sectionId === 'top') ? 'flex' : 'block';
+        window.scrollTo(0, 0);
+    }
+}
+
+// 型紙から中身を流し込む魔法
+function setupContent() {
+    // 1. 履歴書
+    const resumeTmpl = document.getElementById('resume-template').content;
+    document.getElementById('resume').appendChild(resumeTmpl.cloneNode(true));
+
+    // 2. Direction（これを追加！）
+    const dirTmpl = document.getElementById('works-direction-template').content;
+    document.getElementById('works-direction').appendChild(dirTmpl.cloneNode(true));
+
+const webTmpl = document.getElementById('works-web-template').content;
+    document.getElementById('works-web').appendChild(webTmpl.cloneNode(true));
+
+    // 3. CONTACT
+    const contactTmpl = document.getElementById('contact-template').content;
+    document.getElementById('contact').appendChild(contactTmpl.cloneNode(true));
+
+    // ※ Web, Video, Writingの型紙も作ったら、同じようにここに書き足していけばOKやで！
+
+const videoTmpl = document.getElementById('works-video-template').content;
+document.getElementById('works-video').appendChild(videoTmpl.cloneNode(true));
+}
+
+// リンククリック時の制御（アップデート版）
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (link) {
+        e.preventDefault();
+        const id = link.hash.replace('#', '');
+        showSection(id);
+        
+        // 1. 全てのメニューの色を一旦リセット
+        document.querySelectorAll('.menu-list a').forEach(a => a.classList.remove('active'));
+        
+        // 2. クリックされたメニューを緑にする
+        link.classList.add('active');
+
+        // 3. ★もしクリックされたのが WORKS の子メニューなら、親の WORKS も緑にする
+        const isSubMenu = link.closest('.sub-menu');
+        if (isSubMenu) {
+            document.getElementById('works-parent').classList.add('active');
+        }
+    }
+});
+
+// ページ読み込み時の処理
+window.onload = () => {
+    setupContent(); // 型紙から中身を準備
+    showSection('top'); // 最初はTOPを表示
+    
+    // 自己PRのふわっと出るアニメーションの設定
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-title').forEach(title => {
+        observer.observe(title);
+    });
+};
+</script>
+
+</body>
+</html>

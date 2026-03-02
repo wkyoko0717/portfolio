@@ -1,0 +1,486 @@
+
+        /* --- 全体のレイアウト設定 --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Sawarabi Mincho", "Hiragino Mincho ProN", serif;
+            display: flex;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* --- 左側：固定サイドメニュー --- */
+        nav {
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            border-right: 1px solid #eee;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* これで「上詰め」になる */
+            box-sizing: border-box;
+            background-color: #fff;
+            z-index: 100;
+        }
+
+        .logo {
+margin-bottom: 150px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+            line-height: 1.5;
+        }
+
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-list li {
+margin-bottom: 20px; /* メニュー同士の間隔 */
+    position: relative;   /* おまじない */
+        }
+
+        .menu-list a {
+            text-decoration: none;
+            color: #999;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            transition: color 0.3s;
+font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+font-weight: bold;
+        }
+
+        .menu-list a:hover, .menu-list a.active {
+            color: #008080; /* 響子のテーマカラー */
+        }
+
+     .footer-info {
+    margin-top: auto;     /* ★これが魔法！上の要素との間を自動で最大まで広げる */
+    padding-bottom: 20px; /* 画面の一番下から少しだけ浮かせる */
+    font-size: 0.7rem;
+    color: #999;
+    line-height: 1.6;
+}
+
+        .resume-section {
+            max-width: 800px;
+            margin: 0 auto 150px auto;
+		padding:	100px 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- ヘッダー --- */
+ /* --- ヘッダー（ここを丸ごと差し替え） --- */
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+    position: relative; /* 線を引くための基準点 */
+}
+
+/* これが「動く線」の本体 */
+.resume-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* 最初はゼロ */
+    height: 1px; /* 元の太さ */
+    background-color: #333; /* 響子がこだわった「黒っぽい色」 */
+    animation: mainLineGrow 2.4s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes mainLineGrow {
+    to { width: 100%; }
+}
+
+        .resume-header h1 {
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 0.3em;
+        }
+
+
+
+        .profile-img-container {
+            width: 120px;
+            height: 150px;
+            overflow: hidden;
+            border: 1px solid #eee;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* ←影はこっちに引っ越し！ */
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: 0.5s;
+        }
+
+        .profile-img-container img:hover { filter: grayscale(0%); }
+
+        /* --- セクションタイトル --- */
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+            margin: 60px 0 30px 0;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: #eee;
+            margin-left: 20px;
+        }
+
+        /* --- テーブル・リスト --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 20px 0;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        th {
+            width: 150px;
+            font-size: 0.8rem;
+            color: #999;
+            font-weight: normal;
+        }
+        td { font-size: 1rem; line-height: 1.8; }
+
+        .work-item { margin-bottom: 40px; }
+        .work-year { font-weight: bold; color: #333; margin-bottom: 5px; }
+        .work-desc { font-size: 0.9rem; color: #666; margin-top: 5px; }
+
+        /* --- 自己PRの帯（スタイリッシュ版） --- */
+        .pr-card {
+            margin-bottom: 50px;
+        }
+        .pr-title {
+            display: block;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #008080;
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: 0.8s ease-out;
+        }
+
+/* --- 自己PRのタイトルに下線を追加 --- */
+.pr-title {
+    /* 元々ある設定に、これを追加・上書き */
+    position: relative; /* 線を配置する基準にする */
+    padding-bottom: 15px; /* 線との隙間を作る */
+    border-radius: 0; /* 前の帯デザインをスッキリさせるなら */
+    background: none; /* 前の背景色を消して、線だけにするなら */
+    color: #008080; /* 文字色は響子のブルー */
+}
+
+/* 線の本体（最初は幅0） */
+.pr-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* 最初は長さゼロ */
+    height: 1px; /* 線の太さ */
+    background-color: #008080; /* 線の色 */
+    transition: width 2.4s ease-out; /* 2.4秒かけて伸びる */
+}
+
+/* 画面に現れた（is-visibleがついた）時の線の長さ */
+.pr-title.is-visible::after {
+    width: 100%; /* 右端までピーッと伸びる */
+}
+
+        .pr-title.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+            letter-spacing: 0.1em;
+        }
+        .pr-card p {
+            font-size: 0.95rem;
+            line-height: 2;
+            color: #555;
+            margin: 0;
+        }
+
+        .btn-works {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 20px 60px;
+            border: 1px solid #333;
+            color: #333;
+            text-decoration: none;
+            letter-spacing: 0.4em;
+            font-size: 0.8rem;
+            transition: all 0.3s;
+        }
+        .btn-works:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            body { flex-direction: column; }
+            nav { width: 100%; height: auto; position: relative; padding: 30px; border-right: none; border-bottom: 1px solid #eee; }
+            main { margin-left: 0; width: 100%; padding: 40px 20px; }
+        }
+
+/* --- 最終解決用の強力な設定 --- */
+
+/* メインエリアの基本設定 */
+main {
+    margin-left: 280px; /* 左メニューの幅 */
+    width: calc(100% - 280px);
+    height: 100vh;
+    position: relative;
+}
+
+/* --- TOP動画セクション（決定版） --- */
+.top-section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 縦横のド真ん中に固定 */
+    
+    /* 右端の余白を消して、かつ真ん中を表示する秘策 */
+    width: 100%; 
+    height: 80%; /* ★ここ！数字を小さくすると、上下がもっとカットされて「引き」で見えるで */
+    
+    object-fit: cover; /* これが「いい感じに真ん中を切り抜く」魔法 */
+    z-index: 1;
+}
+
+.top-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    pointer-events: none; /* 文字がクリックを邪魔しないように */
+}
+
+.top-text h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5em;
+    margin: 0;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+/* 切り替え用の共通設定 */
+.sub-section {
+    width: 100%;
+    background-color: #fff;
+}
+
+/* --- サブメニューの土台 --- */
+.sub-menu {
+    list-style: none;
+    padding-left: 15px;
+    margin: 0;           /* 最初はマージンなし */
+    height: 0;           /* 高さをゼロにして隠す */
+    opacity: 0;          /* 透明にする */
+    overflow: hidden;
+    transition: all 0.8s ease; /* 0.8秒かけてヒュッ！とさせる */
+    pointer-events: none;      /* 隠れてる時はクリックできないようにする */
+}
+
+/* --- WORKS（親要素）にマウスが乗った時 --- */
+.menu-list li:hover .sub-menu {
+    height: 120px;       /* 4つ分のメニューが入る高さに広げる */
+    opacity: 1;          /* 見えるようにする */
+    margin-top: 10px;    /* 少し隙間をあける */
+    margin-bottom: 20px;
+    pointer-events: auto; /* 見えたらクリックできるようにする */
+}
+
+/* サブメニューの中の文字デザイン */
+.sub-menu li {
+    margin-bottom: 8px;
+}
+
+.sub-menu a {
+    font-size: 0.8rem !important;
+    color: #bbb !important;
+    transition: color 0.3s;
+}
+
+.sub-menu a:hover {
+    color: #333 !important; /* サブメニュー内でホバーした時は濃くする */
+}
+
+@media (max-width: 768px) {
+    nav { position: relative; width: 100%; height: auto; padding: 20px; }
+    main { margin-left: 0 !important; width: 100%; }
+    .top-section video { height: 100%; }
+    table, tr, th, td { display: block; width: 100%; }
+    .sub-menu { height: auto !important; margin-top: 8px; opacity: 1 !important; pointer-events: auto !important; }
+} /* ← ここでスマホ用設定をしっかり閉じます！ */
+
+/* --- ここからは PC でも効かせたい共通ルール --- */
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.work-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover { transform: translateY(-5px); }
+
+.work-img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #f7f7f7; /* 画像がない時も形が見えるように */
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.work-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-title { font-size: 1rem; font-weight: bold; margin-bottom: 5px; }
+.work-category { font-size: 0.75rem; color: #999; }
+.work-description {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: #666;
+    margin-top: 10px;
+    /* 3行以上になったら「...」で隠す設定（スッキリ見える！） */
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 3; */
+    /* -webkit-box-orient: vertical; */
+    /* overflow: hidden; */
+}
+
+.and-more {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #333;
+    letter-spacing: 0.1em;
+font-weight: bold; /* もしもっと目立たせたいなら、これを足すと太字になるで */
+}
+
+.and-more span {
+    font-size: 0.75rem;
+    display: block; /* 改行して下に小さく出す */
+    margin-top: 20px;
+color: #666; /* 下の作品リストは少し控えめな色にしておくとオシャレやね */
+}
+
+/* --- Webページ専用の特別なルール --- */
+
+.works-grid.is-web {
+    /* PCでも3つ並びにするために、最小幅を 250px に設定 */
+grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+.is-web .work-img-wrapper {
+    aspect-ratio: 3 / 4; /* 縦長！ */
+}
+
+.is-web .work-description::after {
+    content: "(Mobile-Optimized / スマホ閲覧推奨)"; /* 表示したい文字 */
+    display: block;               /* 改行して表示 */
+    margin-top: 8px;              /* 少し隙間を作る */
+    color: #008080;               /* 響子お気に入りのグリーン */
+    font-size: 0.75rem;           /* 少し小さめに */
+    font-weight: normal;          /* 太さは標準で */
+}
+
+.is-web .work-description.no-note::after {
+    display: none;
+}
+
+/*
+.content-section {
+    background-color: #faf9f6;
+    color: #333;
+    !important;
+}
+*/
+
+/* 動画2つを横に並べるための設定 */
+.video-pair {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2等分 */
+    gap: 20px; /* 動画同士の隙間 */
+    margin-bottom: 15px;
+}
+
+/* セットごとの間隔 */
+.video-set {
+    margin-bottom: 60px; /* セットとセットの間を広めに取ると綺麗やで */
+}
+
+/* 動画の枠の設定（前回のを流用） */
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* スマホの時は動画を縦に並べる */
+@media (max-width: 768px) {
+    .video-pair {
+        grid-template-columns: 1fr;
+    }
+}
