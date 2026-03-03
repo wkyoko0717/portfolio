@@ -485,7 +485,7 @@ grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.work-image img {
+.work-image img{
     width: 100%;       /* 横幅を枠いっぱいに */
     height: 200px;      /* 高さを固定（好きな高さに調整してな） */
     object-fit: cover;  /* ★これが魔法！縦横比を保ったまま枠を埋める */
